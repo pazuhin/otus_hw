@@ -25,5 +25,8 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
+      - name: Run psalm
+        run: vendor/bin/psalm --no-cache
+
       - name: Run tests
         run: vendor/bin/phpunit
