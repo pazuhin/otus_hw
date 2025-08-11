@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\IoC;
 
+/**
+ * @psalm-api
+ */
 final class IoC
 {
     /**
@@ -24,7 +27,7 @@ final class IoC
      * @template T
      * @param string $key Команда или id сервиса
      * @param mixed ...$args Аргументы команды или параметры для фабрики
-     * @return CommandInterface<T>
+     * @return CommandInterface<T>|CommandInterface<void>
      */
     public function resolve(string $key, ...$args): CommandInterface
     {
@@ -100,7 +103,7 @@ final class IoC
      */
     private function cmdResolve(string $id, ...$args): CommandInterface
     {
-        return new Command(function() use ($id, $args) {
+        return new Command(function() use ($id, $args): mixed {
             // Ищем сначала в текущем скоупе, затем в глобальном
             $scopesToTry = [$this->currentScope];
             if ($this->currentScope !== '_global') {

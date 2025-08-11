@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\IoC;
 
+use Override;
+
 /**
  * @template T
  * @implements CommandInterface<T>
@@ -22,7 +24,9 @@ final class Command implements CommandInterface
 
     /**
      * @return T
+     * @throws \Exception
      */
+    #[Override]
     public function execute(): mixed
     {
         if ($this->callable === null) {

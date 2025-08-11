@@ -4,6 +4,7 @@ namespace App\IoC;
 
 /**
  * @template T
+ * @psalm-api
  */
 interface CommandInterface
 {
