@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\command;
+namespace App\Сommand;
 
-use App\exception\handler\ExceptionHandlerRegistry;
-use App\exception\LoggerInterface;
+use App\Exception\handler\ExceptionHandlerRegistry;
+use App\Exception\LoggerInterface;
 
 final class CommandQueue
 {

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\command;
+namespace App\Сommand;
 
-use App\exception\LoggerInterface;
-use App\exception\MoveException;
+use App\Exception\LoggerInterface;
+use App\Exception\MoveException;
 
 final class MoveCommand implements CommandInterface
 {

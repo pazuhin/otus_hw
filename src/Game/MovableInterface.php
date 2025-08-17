@@ -8,5 +8,5 @@ interface MovableInterface
 
     public function getVelocity(): Coords;
 
-    public function setPosition(Coords $newPosition);
+    public function setPosition(Coords $newPosition): mixed;
 }

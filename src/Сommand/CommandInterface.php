@@ -1,6 +1,6 @@
 <?php
 
-namespace App\command;
+namespace App\Сommand;
 
 interface CommandInterface
 {
