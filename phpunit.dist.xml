@@ -11,7 +11,6 @@
          cacheDirectory=".phpunit.cache"
 >
     <php>
-        <ini name="display_errors" value="1" />
         <ini name="error_reporting" value="-1" />
         <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
@@ -23,20 +22,9 @@
         </testsuite>
     </testsuites>
 
-    <source ignoreSuppressionOfDeprecations="true"
-            ignoreIndirectDeprecations="true"
-            restrictNotices="true"
-            restrictWarnings="true"
-    >
-        <include>
+    <filter>
+        <whitelist>
             <directory>src</directory>
-        </include>
-
-        <deprecationTrigger>
-            <function>trigger_deprecation</function>
-        </deprecationTrigger>
-    </source>
-
-    <extensions>
-    </extensions>
+        </whitelist>
+    </filter>
 </phpunit>

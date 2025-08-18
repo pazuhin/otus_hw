@@ -3,19 +3,20 @@ declare(strict_types=1);
 
 namespace App\Handler;
 
-use App\Game\Coords;
 use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
 
 #[Autoconfigure(tags: ['spaceship.method_handler'])]
-final class PositionGetHandler implements HandlerInterface
+final class PositionSetHandler implements HandlerInterface
 {
     public function getKey(): string
     {
-        return 'App\Game\MovableInterface:getPosition';
+        return 'App\Game\MovableInterface:setPosition';
     }
 
-    public function handle(object $obj, mixed ...$args): Coords
+    public function handle(object $obj, mixed ...$args): null
     {
-        return $obj->position;
+        $obj->position = $args[0];
+
+        return null;
     }
 }

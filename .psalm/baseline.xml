@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="6.13.1@1e3b7f0a8ab32b23197b91107adc0a7ed8a05b51">
+  <file src="src/Adapter/Factory/MovableAdapterFactory.php">
+    <UnusedClass>
+      <code><![CDATA[MovableAdapterFactory]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Adapter/MovableAdapter.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function getPosition(): Coords]]></code>
+      <code><![CDATA[public function getVelocity(): Coords]]></code>
+      <code><![CDATA[public function setPosition(Coords $newPosition): mixed]]></code>
+    </MissingOverrideAttribute>
+  </file>
+  <file src="src/Controller/MainController.php">
+    <UnusedClass>
+      <code><![CDATA[MainController]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Exception/ArrayLogger.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function log(string $errorMessage): void]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[ArrayLogger]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Exception/handler/ExceptionHandlerRegistry.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[register]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Game/Coords.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[toArray]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Game/MovableInterface.php">
+    <PossiblyUnusedReturnValue>
+      <code><![CDATA[mixed]]></code>
+    </PossiblyUnusedReturnValue>
+  </file>
+  <file src="src/Game/Move.php">
+    <UnusedClass>
+      <code><![CDATA[Move]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Game/Rotate.php">
+    <UnusedClass>
+      <code><![CDATA[Rotate]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Handler/PositionGetHandler.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function handle(object $obj, mixed ...$args): Coords]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[PositionGetHandler]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/QuadraticSolver.php">
+    <UnusedClass>
+      <code><![CDATA[QuadraticSolver]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Resolver/SpaceshipOperationsResolver.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[__construct]]></code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src/Сommand/CommandQueue.php">
+    <UnusedClass>
+      <code><![CDATA[CommandQueue]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Сommand/MoveCommand.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function execute(): void]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[MoveCommand]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Сommand/RepeatCommand.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function execute(): void]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[RepeatCommand]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Сommand/RepeatFailedTwiceCommand.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function execute(): void]]></code>
+    </MissingOverrideAttribute>
+    <UnusedClass>
+      <code><![CDATA[RepeatFailedTwiceCommand]]></code>
+    </UnusedClass>
+  </file>
+  <file src="src/Сommand/WriteLogCommand.php">
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function execute(): void]]></code>
+    </MissingOverrideAttribute>
+  </file>
+</files>

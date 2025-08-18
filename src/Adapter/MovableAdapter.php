@@ -16,12 +16,12 @@ final readonly class MovableAdapter implements MovableInterface
 
     public function getPosition(): Coords
     {
-        return $this->resolver->resolve('Spaceship.Operations.IMovable:position.get', $this->obj);
+        return $this->resolver->resolve('App\Game\MovableInterface:getPosition', $this->obj);
     }
 
     public function setPosition(Coords $newPosition): mixed
     {
-        $this->resolver->resolve('Spaceship.Operations.IMovable:position.set', $this->obj, $newPosition);
+        $this->resolver->resolve('App\Game\MovableInterface:setPosition', $this->obj, $newPosition);
 
         return null;
     }
