@@ -29,7 +29,6 @@ class AdapterGeneratorTest extends TestCase
         $obj = new \stdClass();
 
         $adapter = $generator->generate(MovableInterface::class, $obj);
-        var_dump($adapter);die;
 
         $adapter->setPosition(new \App\Game\Coords(1, 2));
         $pos = $adapter->getPosition();
