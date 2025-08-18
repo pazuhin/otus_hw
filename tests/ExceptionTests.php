@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use App\command\CommandInterface;
-use App\command\CommandQueue;
-use App\command\MoveCommand;
-use App\command\RepeatCommand;
-use App\command\RepeatFailedTwiceCommand;
-use App\command\WriteLogCommand;
-use App\exception\ArrayLogger;
-use App\exception\handler\ExceptionHandlerRegistry;
-use App\exception\LoggerInterface;
-use App\exception\MoveException;
+use App\Сommand\CommandInterface;
+use App\Сommand\CommandQueue;
+use App\Сommand\MoveCommand;
+use App\Сommand\RepeatCommand;
+use App\Сommand\RepeatFailedTwiceCommand;
+use App\Сommand\WriteLogCommand;
+use App\Exception\ArrayLogger;
+use App\Exception\handler\ExceptionHandlerRegistry;
+use App\Exception\LoggerInterface;
+use App\Exception\MoveException;
 use JetBrains\PhpStorm\NoReturn;
 use PHPUnit\Framework\TestCase;
 

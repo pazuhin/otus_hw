@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\command;
+namespace App\Сommand;
 
-use App\exception\LoggerInterface;
+use App\Exception\LoggerInterface;
 
 final readonly class WriteLogCommand implements CommandInterface
 {

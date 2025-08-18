@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\exception\handler;
+namespace App\Exception\handler;
 
-use App\command\CommandInterface;
-use App\exception\LoggerInterface;
+use App\Сommand\CommandInterface;
+use App\Exception\LoggerInterface;
 
 final class ExceptionHandlerRegistry
 {
