@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\ServerThreadTest::testStartAndExecuteCommands":8},"times":{"Tests\\ServerThreadTest::testStartAndExecuteCommands":0.003,"Tests\\ServerThreadTest::testHardStopStopsImmediately":0.003,"Tests\\ServerThreadTest::testSoftStopWaitsUntilQueueEmpty":0.003,"Tests\\ServerThreadTest::testExceptionsAreCaughtAndServerContinues":0.003}}
