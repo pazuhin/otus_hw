@@ -8,8 +8,8 @@ use App\IoC\IoC;
 use App\Endpoint\Message;
 use App\Endpoint\InterpretCommand;
 use App\Endpoint\GameController;
-use App\Command\CommandQueue;
-use App\Command\CommandInterface;
+use App\command\CommandQueue;
+use App\command\CommandInterface;
 use App\Exception\ArrayLogger;
 use stdClass;
 

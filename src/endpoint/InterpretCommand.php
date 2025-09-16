@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Endpoint;
 
-use App\Command\CommandInterface;
+use App\command\CommandInterface;
 use App\IoC\IoC;
 
 final readonly class InterpretCommand implements CommandInterface
@@ -13,6 +13,7 @@ final readonly class InterpretCommand implements CommandInterface
         private IoC $ioc
     ) {}
     
+    #[\Override]
     public function execute(): void
     {
         try {

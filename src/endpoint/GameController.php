@@ -7,6 +7,8 @@ use App\IoC\IoC;
 
 /**
  * HTTP контроллер для приема сообщений от агентов.
+ * 
+ * @psalm-suppress UnusedClass
  */
 final readonly class GameController
 {

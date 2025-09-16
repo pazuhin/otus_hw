@@ -6,38 +6,24 @@ namespace App\Endpoint;
 /**
  * Структура входящего сообщения от агента.
  */
-final class Message
+final readonly class Message
 {
     public function __construct(
-        /**
-         * ID игры для маршрутизации.
-         */
-        public readonly string $gameId,
+        public string $gameId,
+        public string $objectId,
+        public string $operationId,
         
         /**
-         * ID игрового объекта, которому адресовано сообщение.
-         */
-        public readonly string $objectId,
-        
-        /**
-         * ID операции для резолва команды через IoC.
-         */
-        public readonly string $operationId,
-        
-        /**
-         * Параметры операции в виде ассоциативного массива.
-         * 
          * @var array<string, mixed>
          */
-        public readonly array $args
+        public array  $args
     ) {}
     
     /**
-     * Создание сообщения из JSON.
-     * 
      * @param string $json
      * @return self
      * @throws \InvalidArgumentException
+     * @psalm-suppress PossiblyUndefinedArrayOffset
      */
     public static function fromJson(string $json): self
     {
@@ -58,11 +44,15 @@ final class Message
         if (!is_array($args)) {
             throw new \InvalidArgumentException('Field "args" must be an array');
         }
+
+        $gameId = (string) $data['gameId'];
+        $objectId = (string) $data['objectId'];
+        $operationId = (string) $data['operationId'];
         
         return new self(
-            gameId: $data['gameId'],
-            objectId: $data['objectId'], 
-            operationId: $data['operationId'],
+            gameId: $gameId,
+            objectId: $objectId, 
+            operationId: $operationId,
             args: $args
         );
     }
