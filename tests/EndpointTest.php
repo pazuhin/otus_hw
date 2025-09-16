@@ -76,10 +76,16 @@ final class EndpointTest extends TestCase
         // Тестовая команда
         $this->ioc->resolve('IoC.Register', 'TestCommand', function(stdClass $obj): CommandInterface {
             return new class implements CommandInterface {
+                #[\Override]
                 public function execute(): void {
                     // Простая тестовая команда
                 }
             };
+        })->execute();
+        
+        // Логгер
+        $this->ioc->resolve('IoC.Register', 'Logger.Error', function(string $message): void {
+            // В тестах не логируем
         })->execute();
     }
     
