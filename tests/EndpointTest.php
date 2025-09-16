@@ -5,9 +5,9 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 use App\IoC\IoC;
-use App\Endpoint\Message;
-use App\Endpoint\InterpretCommand;
-use App\Endpoint\GameController;
+use App\endpoint\Message;
+use App\endpoint\InterpretCommand;
+use App\endpoint\GameController;
 use App\command\CommandQueue;
 use App\command\CommandInterface;
 use App\exception\ArrayLogger;
