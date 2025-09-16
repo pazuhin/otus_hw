@@ -10,7 +10,7 @@ use App\Endpoint\InterpretCommand;
 use App\Endpoint\GameController;
 use App\command\CommandQueue;
 use App\command\CommandInterface;
-use App\Exception\ArrayLogger;
+use App\exception\ArrayLogger;
 use stdClass;
 
 /**
