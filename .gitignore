@@ -1,2 +1,17 @@
 /vendor/
 .idea/
+/.env.local
+/.env.local.php
+/.env.*.local
+/var/
+###< symfony/framework-bundle ###
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+*.csv
+.idea
+.cursor
+.Flex.php/
+.Path.php/
+.BundlesConfigurator.php/
